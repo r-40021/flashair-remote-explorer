@@ -178,7 +178,7 @@ $(function () {
 	// Show the root directory.
 	getFileList('');
 	// Register onClick handler for <a class="dir">
-	$(document).on("click", "a.dir", () => {
+	$(document).on("click", "a.dir", function() {
 		getFileList(this.text);
 	});
 	$("#file").change((e) => {
@@ -190,4 +190,3 @@ $(function () {
 		doUpload();
 	});
 });
-
