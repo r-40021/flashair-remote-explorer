@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>FlashAir Remote Explorer</title>
+    <meta charset="UTF-8">
+    <meta name="copyright" content="(c) 2013, Fixstars Corporation. All rights reserved.">
+    <meta name="author" content="Junichi Kitano">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/SD_WLAN/css/bulma.min.css">
+    <link rel="stylesheet" href="/SD_WLAN/css/main.css">
+    <script type="text/javascript" src="/SD_WLAN/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="/SD_WLAN/js/main.js"></script>
+</head>
+
+<body>
+    <div class="container pt-5">
+        <div id="header">
+            <h1 class="title">FlashAir Remote Explorer</h1>
+            <p class="subtitle">FlashAir 内のファイルをリモートで管理します</p>
+        </div>
+        <div id="list" class="py-5">
+        </div>
+        <div class="py-5">
+            <p class="title is-4 mb-4">アップロード</p>
+            <div id="uploadStatus" class="is-hidden notification is-light"></div>
+            <p>
+
+                <input type="file" id="file" name="file" class="is-hidden" multiple>
+                <label for="file" class="button is-info">ファイル選択</label>
+            </p>
+            <ul id="filenames" class="my-2"></ul>
+        </div>
+    </div>
+</body>
+
+</html>
