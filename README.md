@@ -4,6 +4,8 @@ FlashAir 内のファイルを閲覧したり、任意のフォルダにファ�
 
 A web application that allows you to browse files in your FlashAir and upload files to any folder.
 
+![スクリーンショット](https://github.com/r-40021/flashair-remote-explorer/assets/75155258/8da809fa-d0b0-4378-ac2a-9e0102c7074e)
+
 このプログラムは、[FlashAirへのアップロード](https://flashair-developers.github.io/website/docs/tutorials/advanced/2.html) で紹介されているプログラムの改良版です。
 
 - 複数ファイルのアップロードに対応
