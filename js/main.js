@@ -64,10 +64,11 @@ function showFileList(path) {
 		}
 		// Make a link to directories and files.
 		const filelink = $('<a href="javascript:void(0)"></a>');
-		const caption = file["fname"];
+		let caption = file["fname"];
 		const fileobj = $("<div></div>");
 		if (file["attr"] & 0x10) {
 			filelink.addClass("dir");
+			caption += "/";
 		} else {
 			filelink.addClass("file").attr('href', file["r_uri"] + '/' + file["fname"]).attr("target", "_blank");
 		}
@@ -102,7 +103,7 @@ function makePath(dir) {
 // Get file list
 function getFileList(dir) {
 	// Make a path to show next.
-	const nextPath = makePath(dir);
+	const nextPath = makePath(dir.replace(/\/$/, ""));
 	// Make URL for CGI. (DIR must not end with '/' except if it is the root.)
 	const url = "/command.cgi?op=100&DIR=" + nextPath;
 	// Issue CGI command.
@@ -179,6 +180,7 @@ $(function () {
 	getFileList('');
 	// Register onClick handler for <a class="dir">
 	$(document).on("click", "a.dir", function() {
+		$("#uploadStatus").removeClass("is-info is-danger is-success").addClass("is-hidden");
 		getFileList(this.text);
 	});
 	$("#file").change((e) => {
